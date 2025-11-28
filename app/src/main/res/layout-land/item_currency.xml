@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <!-- LEFT PANEL : Search + Status -->
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingEnd="16dp">
+
+        <!-- Search Bar -->
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search currency"
+            android:drawableStart="@android:drawable/ic_menu_search"
+            android:drawablePadding="8dp"
+            android:padding="12dp"
+            android:background="@android:drawable/edit_text"
+            android:layout_marginBottom="12dp"
+            android:inputType="text" />
+
+        <!-- Currency Count -->
+        <TextView
+            android:id="@+id/currencyCountTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0 currencies listed"
+            android:textSize="14sp"
+            android:textColor="#666"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Status Text -->
+        <TextView
+            android:id="@+id/statusTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:text="Loading..."
+            android:visibility="gone"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Loading Spinner -->
+        <ProgressBar
+            android:id="@+id/loadingSpinner"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <!-- RIGHT PANEL : Currency List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/currencyRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        tools:listitem="@layout/currency_item" />
+
+</LinearLayout>

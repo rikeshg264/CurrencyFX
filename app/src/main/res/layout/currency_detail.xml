@@ -1,0 +1,165 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F4F7"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Back Button -->
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@drawable/ic_back_arrow"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:layout_marginBottom="12dp"
+            app:tint="#222" />
+
+        <!-- Flag + Name -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/currencyFlagImageView"
+                android:layout_width="56dp"
+                android:layout_height="36dp"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/ic_launcher_foreground" />
+
+            <TextView
+                android:id="@+id/currencyNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:textSize="20sp"
+                android:textColor="#222"
+                android:textStyle="bold"
+                tools:text="USD - United States Dollar" />
+        </LinearLayout>
+
+        <!-- Exchange Rate -->
+        <TextView
+            android:id="@+id/exchangeRateTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="52sp"
+            android:textColor="#1A5E20"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="6dp"
+            tools:text="1£ = 4.862" />
+
+        <!-- Timestamp -->
+        <TextView
+            android:id="@+id/timestampTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#666"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginBottom="28dp"
+            tools:text="Updated 2025-02-10" />
+
+        <!-- Combined box + swap row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="#FFFFFF"
+            android:padding="12dp">
+
+            <!-- LEFT: Amount fields stacked -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!-- TOP input -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <EditText
+                        android:id="@+id/topAmountEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="0"
+                        android:inputType="numberDecimal"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:background="@android:drawable/edit_text" />
+
+                    <TextView
+                        android:id="@+id/topCurrencyCodeTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:textColor="#222"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:text="GBP" />
+                </LinearLayout>
+
+                <!-- BOTTOM input -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/bottomAmountEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="0"
+                        android:inputType="numberDecimal"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:background="@android:drawable/edit_text" />
+
+                    <TextView
+                        android:id="@+id/bottomCurrencyCodeTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="12dp"
+                        android:textColor="#222"
+                        tools:text="USD" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- RIGHT: Swap Button -->
+            <ImageButton
+                android:id="@+id/swapButton"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:src="@android:drawable/ic_menu_revert"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:layout_marginStart="16dp"
+                app:tint="#222" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Background colors based on exchange rate strength -->
+    <color name="rate_very_high">#FFCCCC</color>   <!-- rate ≥ 100 -->
+    <color name="rate_high">#FFE0E0</color>        <!-- rate ≥ 10 -->
+    <color name="rate_medium">#FFFFCC</color>      <!-- rate ≥ 2 -->
+    <color name="rate_low">#CCFFCC</color>         <!-- rate ≥ 1 -->
+    <color name="rate_very_low">#B3FFB3</color>    <!-- rate < 1 -->
+
+</resources>
